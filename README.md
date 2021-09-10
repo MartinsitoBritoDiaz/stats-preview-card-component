@@ -12,7 +12,7 @@ Thanks for checking out this front-end coding challenge.
 
 ## Links
 
-![netlify]https://sad-goldwasser-b8a799.netlify.app/
+https://sad-goldwasser-b8a799.netlify.app/
 
 ## Author
 
