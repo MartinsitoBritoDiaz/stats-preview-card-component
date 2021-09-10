@@ -17,45 +17,126 @@ html{
     box-sizing: inherit;
 }
 
+
 body{
-    font-size: 1.2rem;
-    font-family: 'Inter', sans-serif;
+    min-height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
     background-color: var(--very-dark-blue);
 }
 
 .card-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: var(--dark-blue);
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;    
     border-radius: 1rem;
-}
 
-.text-container{
-    color: white;
-    margin: 4rem;
-}
-
-.img-container{
-    background-color: var(--soft-violet);;
-}
-
-img{
-    width: 100%;
-    height: 100%;
-    border-bottom-right-radius: 1rem;
-    border-top-right-radius: 1rem;
-    
-}
-
-.stats-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
+    width: 100rem;
+    height: 44rem;
+    background-color: var(--dark-blue);
 }
 
 h1 span{
     color: var(--soft-violet);
+    letter-spacing: 0.3rem;
+}
+
+.text-container{
+    color: white;
+    
+    margin: 6rem;
+    display: block;
+}
+
+.text-container p{
+    margin-top: 2rem;
+    word-spacing: 0.2rem;
+    line-height: 2rem;
+}
+
+.img-container{
+    position: relative;
+    display: block;
+}
+
+.img-container .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background: var(--soft-violet);
+    
+}
+
+.stats-container{
+    display: flex;
+}
+
+.stats{
+    margin-top: 4rem;
+    margin-right: 4rem;
+    text-transform: uppercase;
+}
+
+.stats h2{
+    font-size: 2.4rem;
+}
+
+.stats-container .stats p{
+    margin-top: -1.3rem;
+}
+
+p{
+    font-size: 1.3rem;
+    color:gray
+}
+
+@media (max-width: 468px){
+    .card-container{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 32rem;
+        height: 90rem;
+    }
+
+    .text-container h1{
+        font-size: 1.9rem;
+    }
+
+    .img-container{
+        position: relative;
+        margin-top: -5rem;
+    }   
+
+    .img-container img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-container{
+        justify-content: center;
+        text-align: center;
+        
+        margin-top: 1rem;
+    }
+
+    .stats-container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats-container .stats{
+        align-items: center;
+        margin: 4rem;
+        margin-bottom: -3rem;
+    }
+
 }
